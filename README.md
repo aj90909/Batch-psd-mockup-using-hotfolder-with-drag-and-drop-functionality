@@ -94,4 +94,4 @@ edit this to path of photoshop.exe and "Batch-Mockup\Batch-Mockup-Copy\Batch rep
 
 └───functions
 
-        1cLogoMock.cmd
+│           1cLogoMock.cmd
