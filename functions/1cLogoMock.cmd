@@ -1,0 +1,1 @@
+start /MIN "C:\Program Files\Adobe\Adobe Photoshop 2021\Photoshop.exe" "M:\User\Downloads\Batch-Mockup\Batch-Mockup-Copy\Batch replace example (1cLogoMock).jsx"
