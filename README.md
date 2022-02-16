@@ -4,6 +4,10 @@
 
 n/a - in dev
 
+big credit to : https://github.com/joonaspaakko/Batch-Mockup-Smart-Object-Replacement-photoshop-script
+
+and : https://github.com/paskalito/hotfolder
+
 # Requirements
 
 Install git bash for windows. Select option to allow right click in folder.
