@@ -104,13 +104,13 @@ edit this to path of photoshop.exe and "Batch-Mockup\Batch-Mockup-Copy\Batch rep
 
 magick histogram (line 72 of color.sh) needs to ignore first line that matches pattern F*F*F* which would void white/light tones, the most commonly occuring pixel color
 
-Input:
+Input to git bash example (first line matches pattern, includes "FFFEFEFF"):
  
 ```
 magick convert "Coca-Cola_logo.svg" -colors 5 -depth 8 -format "%c" histogram:info: | sort -n -k 1 -r
 ```
 
-output: 
+git bash output: 
 
 ```
     76249: (255,254,254,255) #FFFEFEFF srgba(255,254,254,1)
@@ -120,4 +120,8 @@ output:
     924: (240,123,131,255) #F07B83FF srgba(240,123,131,1)
 ```
 
-line 72 of color.sh: magick convert ./* -colors 5 -depth 8 -format "%c" histogram:info: | sort -n -k 4 | head -n 1 | sed 's/.*(//' | sed 's/,/ /g' | sed 's|\(.*\) .*|\1|' | awk '{print "P3 1 1 255 " $0}'>../color.ppm
+**line 72 of color.sh:** 
+
+```
+magick convert ./* -colors 5 -depth 8 -format "%c" histogram:info: | sort -n -k 4 | head -n 1 | sed 's/.*(//' | sed 's/,/ /g' | sed 's|\(.*\) .*|\1|' | awk '{print "P3 1 1 255 " $0}'>../color.ppm
+```
