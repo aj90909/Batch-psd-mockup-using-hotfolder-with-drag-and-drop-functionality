@@ -69,7 +69,7 @@ else
 			# replaced source with . for bigger compatibility
 #			for f in ./1cLogoMock_PROCESSING/*.; do
     # do some stuff here with "$f"
-			magick convert ./* -colors 5 -depth 8 -format "%c" histogram:info: | sort -n -k 4 | head -n 1 | sed 's/.*(//' | sed 's/,/ /g' | sed 's|\(.*\) .*|\1|' | awk '{print "P3 1 1 255 " $0}'>../color.ppm
+			magick convert ./* -colors 5 -depth 8 -format "%c" histogram:info: | sort -n -k 1 -r | sed -n '/F[^[]*F[^[]*F/!p' | head -n 1 | sed 's/.*(//' | sed 's/,/ /g' | sed 's|\(.*\) .*|\1|' | awk '{print "P3 1 1 255 " $0}'>../color.ppm
     # remember to quote it or spaces may misbehave
 #			done
 			sleep 2
