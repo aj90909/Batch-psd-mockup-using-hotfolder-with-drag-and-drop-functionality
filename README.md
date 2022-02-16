@@ -44,6 +44,10 @@ credit:
 
 https://github.com/joonaspaakko/Batch-Mockup-Smart-Object-Replacement-photoshop-script 
 
+**color.sh**
+
+Modified version of https://github.com/paskalito/hotfolder
+
 **Batch replace example (1cLogoMock).jsx**
 
 settings file. calls mockup files and layers. edit this for multiple mockups / settings
