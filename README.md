@@ -106,7 +106,7 @@ edit this to path of photoshop.exe and "Batch-Mockup\Batch-Mockup-Copy\Batch rep
 
 # Issues
 ### magick histogram sorting
-magick histogram (line 72 of color.sh) needs to ignore any line that matches pattern F\*F\*F\*. This may cause issues in some instances of light logos
+magick histogram (line 72 of color.sh) needs to ignore any line that matches pattern F\*F\*F. This may cause issues in some instances of light logos
 
 manual input to git bash example:
  
