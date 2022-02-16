@@ -20,6 +20,8 @@ https://imagemagick.org/script/download.php
 
 Download repo and unzip
 
+for ".\functions\1cLogoMock.cmd", edit this to path of photoshop.exe and "Batch-Mockup\Batch-Mockup-Copy\Batch replace example (1cLogoMock).jsx"
+
 # Start
 
 >right click in folder -> run git bash here
@@ -59,10 +61,6 @@ settings file. calls mockup files and layers. edit this for multiple mockups / s
 credit:
 
 https://github.com/joonaspaakko/Batch-Mockup-Smart-Object-Replacement-photoshop-script
-
-#### .\functions\1cLogoMock.cmd
-
-edit this to path of photoshop.exe and "Batch-Mockup\Batch-Mockup-Copy\Batch replace example (1cLogoMock).jsx"
 
 ## Folder Tree
 
