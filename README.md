@@ -105,27 +105,25 @@ edit this to path of photoshop.exe and "Batch-Mockup\Batch-Mockup-Copy\Batch rep
 │           1cLogoMock.cmd
 
 # Issues
+### magick histogram sorting
+magick histogram (line 72 of color.sh) needs to ignore any line that matches pattern F*F*F*. This may cause issues in some instances of light logos
 
-magick histogram (line 72 of color.sh) needs to ignore first line that matches pattern F*F*F* which would void white/light tones, the most commonly occuring pixel color
-
-Input to git bash example (first line matches pattern, includes "FFFEFEFF"):
+manual input to git bash example:
  
 ```
-magick convert "Coca-Cola_logo.svg" -colors 5 -depth 8 -format "%c" histogram:info: | sort -n -k 1 -r
+magick convert "Coca-Cola_logo.svg" -colors 5 -depth 8 -format "%c" histogram:info: | sort -n -k 1 -r | sed -n '/F[^[]*F[^[]*F/!p' | head -n 1 | sed 's/.*(//' | sed 's/,/ /g' | sed 's|\(.*\) .*|\1|' | awk '{print "P3 1 1 255 " $0}'
 ```
 
 git bash output: 
 
 ```
-    76249: (255,254,254,255) #FFFEFEFF srgba(255,254,254,1)
-    38674: (230,29,43,255) #E61D2BFF srgba(230,29,43,1)
-    1579: (244,160,166,255) #F4A0A6FF srgba(244,160,166,1)
-    1269: (236,83,94,255) #EC535EFF srgba(236,83,94,1)
-    924: (240,123,131,255) #F07B83FF srgba(240,123,131,1)
+P3 1 1 255 230 29 43
+
 ```
 
 **line 72 of color.sh:** 
 
 ```
-magick convert ./* -colors 5 -depth 8 -format "%c" histogram:info: | sort -n -k 4 | head -n 1 | sed 's/.*(//' | sed 's/,/ /g' | sed 's|\(.*\) .*|\1|' | awk '{print "P3 1 1 255 " $0}'>../color.ppm
+magick convert ./* -colors 5 -depth 8 -format "%c" histogram:info: | sort -n -k 1 -r | sed -n '/F[^[]*F[^[]*F/!p' | head -n 1 | sed 's/.*(//' | sed 's/,/ /g' | sed 's|\(.*\) .*|\1|' | awk '{print "P3 1 1 255 " $0}'>../color.ppm
 ```
+
