@@ -8,6 +8,8 @@ big credit to : https://github.com/joonaspaakko/Batch-Mockup-Smart-Object-Replac
 
 and : https://github.com/paskalito/hotfolder
 
+![This is an image](https://raw.githubusercontent.com/aj90909/Batch-mockup/main/dragndrop.gif)![This is an image](https://raw.githubusercontent.com/aj90909/Batch-mockup/main/listener.gif)
+
 # Requirements
 
 Install git bash for windows. Select option to allow right click in folder.
