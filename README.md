@@ -1,4 +1,4 @@
-# Batch-mockup
+# A hotfolder to create psd mockups or to run any .jsx file etc
 
 # Intro
 
